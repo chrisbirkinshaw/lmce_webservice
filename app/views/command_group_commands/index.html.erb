@@ -1,0 +1,32 @@
+<h1>Listing command_group_commands</h1>
+
+<table>
+  <tr>
+    <th>CommandGroup</th>
+    <th>Command</th>
+    <th>Device</th>
+    <th>DeviceGroup</th>
+    <th>Turnoff</th>
+    <th>Ordernum</th>
+    <th>Deliveryconfirmation</th>
+  </tr>
+
+<% for command_group_command in @command_group_commands %>
+  <tr>
+    <td><%= link_to command_group_command.command_group.id, command_group_command.command_group unless command_group_command.command_group.nil? %></td>
+    <td><%= link_to command_group_command.command.id, command_group_command.command unless command_group_command.command.nil? %></td>
+    <td><%= link_to command_group_command.device.id, command_group_command.device unless command_group_command.device.nil? %></td>
+    <td><%= link_to command_group_command.device_group.id, command_group_command.device_group unless command_group_command.device_group.nil? %><td>   
+    <td><%=h command_group_command.TurnOff %></td>
+    <td><%=h command_group_command.OrderNum %></td>
+    <td><%=h command_group_command.DeliveryConfirmation %></td>
+    <td><%= link_to 'Show', command_group_command %></td>
+    <td><%= link_to 'Edit', edit_command_group_command_path(command_group_command) %></td>
+    <td><%= link_to 'Destroy', command_group_command, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New command_group_command', new_command_group_command_path %>

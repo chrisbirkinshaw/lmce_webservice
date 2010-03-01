@@ -1,0 +1,28 @@
+<h1>Editing room</h1>
+
+<% form_for(@room) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :ManuallyConfigureEA %><br />
+    <%= f.text_field :ManuallyConfigureEA %>
+  </p>
+  <p>
+    <%= f.label :HideFromOrbiter %><br />
+    <%= f.text_field :HideFromOrbiter %>
+  </p>
+  <p>
+    <%= f.label :FloorplanInfo %><br />
+    <%= f.text_area :FloorplanInfo %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @room %> |
+<%= link_to 'Back', rooms_path %>

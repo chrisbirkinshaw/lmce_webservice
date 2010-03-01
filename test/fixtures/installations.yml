@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Description: 
+  Name: 
+  Address: 
+  City: 
+  State: 
+  Zip: 
+  ActivationCode: 
+  LastStatus: 
+  LastAlive: 
+  isActive: 
+  isMonitored: false
+
+two:
+  Description: 
+  Name: 
+  Address: 
+  City: 
+  State: 
+  Zip: 
+  ActivationCode: 
+  LastStatus: 
+  LastAlive: 
+  isActive: 
+  isMonitored: false

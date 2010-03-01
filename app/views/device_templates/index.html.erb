@@ -1,0 +1,34 @@
+<h1>Listing device_templates</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Comments</th>
+    <th>Implementsdce</th>
+    <th>Isembedded</th>
+    <th>Isplugandplay</th>
+    <th>Isipbased</th>
+    <th>Isplugin</th>
+    <th>Inheritsmacfrompc</th>
+  </tr>
+
+<% for device_template in @device_templates %>
+  <tr>
+    <td><%=h device_template.Description %></td>
+    <td><%=h device_template.Comments %></td>
+    <td><%=h device_template.ImplementsDCE %></td>
+    <td><%=h device_template.IsEmbedded %></td>
+    <td><%=h device_template.IsPlugAndPlay %></td>
+    <td><%=h device_template.IsIPBased %></td>
+    <td><%=h device_template.IsPlugIn %></td>
+    <td><%=h device_template.InheritsMacFromPC %></td>
+    <td><%= link_to 'Show', device_template %></td>
+    <td><%= link_to 'Edit', edit_device_template_path(device_template) %></td>
+    <td><%= link_to 'Destroy', device_template, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New device_template', new_device_template_path %>

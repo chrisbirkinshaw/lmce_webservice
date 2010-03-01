@@ -1,0 +1,32 @@
+<h1>Listing command_groups</h1>
+
+<table>
+  <tr>
+    <th>Installation</th>
+    <th>Description</th>
+    <th>Hint</th>
+    <th>Altid</th>
+    <th>Disabled</th>
+    <th>Templateparm1</th>
+    <th>Templateparm2</th>
+  </tr>
+
+<% for command_group in @command_groups %>
+  <tr>
+    <td><%= link_to command_group.installation.id, command_group.installation unless command_group.installation.nil? %></td>
+    <td><%=h command_group.Description %></td>
+    <td><%=h command_group.Hint %></td>
+    <td><%=h command_group.AltID %></td>
+    <td><%=h command_group.Disabled %></td>
+    <td><%=h command_group.TemplateParm1 %></td>
+    <td><%=h command_group.TemplateParm2 %></td>
+    <td><%= link_to 'Show', command_group %></td>
+    <td><%= link_to 'Edit', edit_command_group_path(command_group) %></td>
+    <td><%= link_to 'Destroy', command_group, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New command_group', new_command_group_path %>

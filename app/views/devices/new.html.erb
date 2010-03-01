@@ -1,0 +1,59 @@
+<h1>New device</h1>
+
+<% form_for(@device) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Disabled %><br />
+    <%= f.text_field :Disabled %>
+  </p>
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :IPaddress %><br />
+    <%= f.text_field :IPaddress %>
+  </p>
+  <p>
+    <%= f.label :MACaddress %><br />
+    <%= f.text_field :MACaddress %>
+  </p>
+  <p>
+    <%= f.label :IgnoreOnOff %><br />
+    <%= f.text_field :IgnoreOnOff %>
+  </p>
+  <p>
+    <%= f.label :NeedConfigure %><br />
+    <%= f.text_field :NeedConfigure %>
+  </p>
+  <p>
+    <%= f.label :State %><br />
+    <%= f.text_field :State %>
+  </p>
+  <p>
+    <%= f.label :Status %><br />
+    <%= f.text_field :Status %>
+  </p>
+  <p>
+    <%= f.label :PingTest %><br />
+    <%= f.text_field :PingTest %>
+  </p>
+  <p>
+    <%= f.label :IsNewDevice %><br />
+    <%= f.text_field :IsNewDevice %>
+  </p>
+  <p>
+    <%= f.label :ManuallyConfigureEA %><br />
+    <%= f.text_field :ManuallyConfigureEA %>
+  </p>
+  <p>
+    <%= f.label :Registered %><br />
+    <%= f.check_box :Registered %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', devices_path %>

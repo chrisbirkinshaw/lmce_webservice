@@ -1,0 +1,68 @@
+<p>
+  <b>Description:</b>
+  <%=h @installation.Description %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @installation.Name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @installation.Address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @installation.City %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @installation.State %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @installation.Zip %>
+</p>
+
+<p>
+  <b>Activationcode:</b>
+  <%=h @installation.ActivationCode %>
+</p>
+
+<p>
+  <b>Laststatus:</b>
+  <%=h @installation.LastStatus %>
+</p>
+
+<p>
+  <b>Lastalive:</b>
+  <%=h @installation.LastAlive %>
+</p>
+
+<p>
+  <b>Isactive:</b>
+  <%=h @installation.isActive %>
+</p>
+
+<p>
+  <b>Ismonitored:</b>
+  <%=h @installation.isMonitored %>
+</p>
+
+<p>
+  <b>Devices:</b>
+  <%= @installation.devices.collect { |device| link_to device.id, device }.join(', ') %>
+</p
+
+<p>
+  <b>Rooms:</b>
+  <%= @installation.rooms.collect { |room| link_to room.id, room }.join(', ') %>
+</p
+
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>

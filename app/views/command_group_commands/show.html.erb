@@ -1,0 +1,39 @@
+<p>
+  <b>Turnoff:</b>
+  <%=h @command_group_command.TurnOff %>
+</p>
+
+<p>
+  <b>Ordernum:</b>
+  <%=h @command_group_command.OrderNum %>
+</p>
+
+<p>
+  <b>Deliveryconfirmation:</b>
+  <%=h @command_group_command.DeliveryConfirmation %>
+</p>
+
+<p>
+  <b>CommandGroup</b>
+  <%= link_to @command_group_command.command_group.id, @command_group_command.command_group unless @command_group_command.command_group.nil? %>
+</p>
+
+<p>
+  <b>Command</b>
+  <%= link_to @command_group_command.command.id, @command_group_command.command unless @command_group_command.command.nil? %>
+</p>
+
+<p>
+  <b>Device</b>
+  <%= link_to @command_group_command.device.id, @command_group_command.device unless @command_group_command.device.nil? %>
+</p>
+
+<p>
+  <b>DeviceGroup</b>
+  <%= link_to @command_group_command.device_group.id, @command_group_command.device_group unless @command_group_command.device_group.nil? %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_command_group_command_path(@command_group_command) %> |
+<%= link_to 'Back', command_group_commands_path %>

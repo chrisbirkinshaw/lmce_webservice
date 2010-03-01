@@ -1,0 +1,80 @@
+<h1>Editing device_template</h1>
+
+<% form_for(@device_template) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :Comments %><br />
+    <%= f.text_field :Comments %>
+  </p>
+  <p>
+    <%= f.label :Define %><br />
+    <%= f.text_field :Define %>
+  </p>
+  <p>
+    <%= f.label :ImplementsDCE %><br />
+    <%= f.text_field :ImplementsDCE %>
+  </p>
+  <p>
+    <%= f.label :IsEmbedded %><br />
+    <%= f.text_field :IsEmbedded %>
+  </p>
+  <p>
+    <%= f.label :CommandLine %><br />
+    <%= f.text_field :CommandLine %>
+  </p>
+  <p>
+    <%= f.label :IsPlugAndPlay %><br />
+    <%= f.text_field :IsPlugAndPlay %>
+  </p>
+  <p>
+    <%= f.label :IsIPBased %><br />
+    <%= f.text_field :IsIPBased %>
+  </p>
+  <p>
+    <%= f.label :IsPlugIn %><br />
+    <%= f.text_field :IsPlugIn %>
+  </p>
+  <p>
+    <%= f.label :IRFrequency %><br />
+    <%= f.text_field :IRFrequency %>
+  </p>
+  <p>
+    <%= f.label :DestinationDir %><br />
+    <%= f.text_field :DestinationDir %>
+  </p>
+  <p>
+    <%= f.label :InheritsMacFromPC %><br />
+    <%= f.text_field :InheritsMacFromPC %>
+  </p>
+  <p>
+    <%= f.label :ConfigureScript %><br />
+    <%= f.text_field :ConfigureScript %>
+  </p>
+  <p>
+    <%= f.label :ManufacturerURL %><br />
+    <%= f.text_field :ManufacturerURL %>
+  </p>
+  <p>
+    <%= f.label :InternalURLSuffix %><br />
+    <%= f.text_field :InternalURLSuffix %>
+  </p>
+  <p>
+    <%= f.label :WizardURL %><br />
+    <%= f.text_field :WizardURL %>
+  </p>
+  <p>
+    <%= f.label :HelpURL %><br />
+    <%= f.text_field :HelpURL %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @device_template %> |
+<%= link_to 'Back', device_templates_path %>

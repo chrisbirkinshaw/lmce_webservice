@@ -1,0 +1,24 @@
+<h1>Listing device_groups</h1>
+
+<table>
+  <tr>
+    <th>Installation</th>
+    <th>Description</th>
+    <th>Type</th>
+  </tr>
+
+<% for device_group in @device_groups %>
+  <tr>
+    <td><%= link_to device_group.installation.id, device_group.installation unless device_group.installation.nil? %></td>
+    <td><%=h device_group.Description %></td>
+    <td><%=h device_group.Type %></td>
+    <td><%= link_to 'Show', device_group %></td>
+    <td><%= link_to 'Edit', edit_device_group_path(device_group) %></td>
+    <td><%= link_to 'Destroy', device_group, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New device_group', new_device_group_path %>

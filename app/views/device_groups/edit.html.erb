@@ -1,0 +1,20 @@
+<h1>Editing device_group</h1>
+
+<% form_for(@device_group) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :Type %><br />
+    <%= f.text_field :Type %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @device_group %> |
+<%= link_to 'Back', device_groups_path %>

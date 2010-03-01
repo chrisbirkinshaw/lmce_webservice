@@ -1,0 +1,28 @@
+<p>
+  <b>Description:</b>
+  <%=h @command.Description %>
+</p>
+
+<p>
+  <b>Define:</b>
+  <%=h @command.Define %>
+</p>
+
+<p>
+  <b>Avcommand:</b>
+  <%=h @command.AVCommand %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%=h @command.Comments %>
+</p>
+
+<p>
+  <b>Log:</b>
+  <%=h @command.Log %>
+</p>
+
+
+<%= link_to 'Edit', edit_command_path(@command) %> |
+<%= link_to 'Back', commands_path %>

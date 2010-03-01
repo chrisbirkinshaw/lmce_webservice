@@ -1,0 +1,78 @@
+<p>
+  <b>Disabled:</b>
+  <%=h @device.Disabled %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @device.Description %>
+</p>
+
+<p>
+  <b>Ipaddress:</b>
+  <%=h @device.IPaddress %>
+</p>
+
+<p>
+  <b>Macaddress:</b>
+  <%=h @device.MACaddress %>
+</p>
+
+<p>
+  <b>Ignoreonoff:</b>
+  <%=h @device.IgnoreOnOff %>
+</p>
+
+<p>
+  <b>Needconfigure:</b>
+  <%=h @device.NeedConfigure %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @device.State %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @device.Status %>
+</p>
+
+<p>
+  <b>Pingtest:</b>
+  <%=h @device.PingTest %>
+</p>
+
+<p>
+  <b>Isnewdevice:</b>
+  <%=h @device.IsNewDevice %>
+</p>
+
+<p>
+  <b>Manuallyconfigureea:</b>
+  <%=h @device.ManuallyConfigureEA %>
+</p>
+
+<p>
+  <b>Registered:</b>
+  <%=h @device.Registered %>
+</p>
+
+<p>
+  <b>DeviceTemplate</b>
+  <%= link_to @device.device_template.id, @device.device_template unless @device.device_template.nil? %>
+</p>
+ 
+<p>
+  <b>Room:</b>
+  <%= link_to @device.room.id, @device.room unless @device.room.nil? %>
+</p>
+
+<p>
+  <b>Installation:</b>
+  <%= link_to @device.installation.id, @device.installation unless @device.installation.nil? %>
+</p>
+
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

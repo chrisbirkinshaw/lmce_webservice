@@ -1,0 +1,2 @@
+module DeviceTemplatesHelper
+end

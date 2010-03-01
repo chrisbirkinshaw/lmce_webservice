@@ -1,0 +1,20 @@
+<h1>Editing room_type</h1>
+
+<% form_for(@room_type) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :Define %><br />
+    <%= f.text_field :Define %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @room_type %> |
+<%= link_to 'Back', room_types_path %>

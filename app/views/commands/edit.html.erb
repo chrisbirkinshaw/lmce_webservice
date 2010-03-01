@@ -1,0 +1,32 @@
+<h1>Editing command</h1>
+
+<% form_for(@command) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Description %><br />
+    <%= f.text_field :Description %>
+  </p>
+  <p>
+    <%= f.label :Define %><br />
+    <%= f.text_field :Define %>
+  </p>
+  <p>
+    <%= f.label :AVCommand %><br />
+    <%= f.text_field :AVCommand %>
+  </p>
+  <p>
+    <%= f.label :Comments %><br />
+    <%= f.text_field :Comments %>
+  </p>
+  <p>
+    <%= f.label :Log %><br />
+    <%= f.check_box :Log %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @command %> |
+<%= link_to 'Back', commands_path %>

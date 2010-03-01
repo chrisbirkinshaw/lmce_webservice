@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  Description: 
+  Define: 
+  AVCommand: 
+  Comments: 
+  Log: false
+
+two:
+  Description: 
+  Define: 
+  AVCommand: 
+  Comments: 
+  Log: false

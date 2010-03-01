@@ -1,0 +1,28 @@
+<p>
+  <b>Description:</b>
+  <%=h @room.Description %>
+</p>
+
+<p>
+  <b>Manuallyconfigureea:</b>
+  <%=h @room.ManuallyConfigureEA %>
+</p>
+
+<p>
+  <b>Hidefromorbiter:</b>
+  <%=h @room.HideFromOrbiter %>
+</p>
+
+<p>
+  <b>Floorplaninfo:</b>
+  <%=h @room.FloorplanInfo %>
+</p>
+
+<p>
+  <b>Devices:</b>
+  <%= @room.devices.collect { |device| link_to device.id, device }.join(', ') %>
+</p
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

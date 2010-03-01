@@ -1,0 +1,23 @@
+<h1>New command_group_command</h1>
+
+<% form_for(@command_group_command) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :TurnOff %><br />
+    <%= f.text_field :TurnOff %>
+  </p>
+  <p>
+    <%= f.label :OrderNum %><br />
+    <%= f.text_field :OrderNum %>
+  </p>
+  <p>
+    <%= f.label :DeliveryConfirmation %><br />
+    <%= f.check_box :DeliveryConfirmation %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', command_group_commands_path %>
